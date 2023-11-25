@@ -11,7 +11,7 @@ import com.example.shoppingui.databinding.RvCategoryBinding
 class CategoryAdapter(private val list: ArrayList<CategoryModel>): RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
 
-    inner class CategoryViewHolder(val binding: RvCategoryBinding):RecyclerView.ViewHolder(binding.root){
+    inner class CategoryViewHolder(private val binding: RvCategoryBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(bindList:CategoryModel){
             binding.tvBtn.text = bindList.categoryButton
         }
@@ -27,12 +27,6 @@ class CategoryAdapter(private val list: ArrayList<CategoryModel>): RecyclerView.
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val currentPosition = list[position]
         holder.bind(currentPosition)
-    }
 
-    fun setList(list: MutableList<String>){
-        list.clear()
-        list.addAll(list)
-        notifyDataSetChanged()
     }
-
 }

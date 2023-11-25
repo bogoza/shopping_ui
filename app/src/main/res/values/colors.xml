@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_color">#22343C</color>
     <color name="btn_color">#30444E</color>
+    <color name="girl_background_color">#EDF1FA</color>
+    <color name="heart_red">#FE565E</color>
+    <color name="text_color">#62747C</color>
 </resources>
